@@ -1,0 +1,92 @@
+<img src="assets/images/nav-bar/mytrkr_icon_logo.svg" alt="myTRKR Logo" class="icon_logo" />
+<div class="navbar_header">
+  <a routerLink="/" class="logo_link">
+    <app-mytrkr-logo></app-mytrkr-logo>
+  </a>
+  <button class="secondary">
+    <app-left-arrow></app-left-arrow>
+  </button>
+</div>
+<nav class="navbar_container">
+  <a class="navbar_item" routerLink="dispatch-board" routerLinkActive="navbar_active">
+    <app-dispatch-board-icon></app-dispatch-board-icon>
+    <span>Dispatch board</span>
+  </a>
+  <a class="navbar_item" routerLink="load-board" routerLinkActive="navbar_active">
+    <app-load-board-icon></app-load-board-icon>
+    <span>Load board</span>
+  </a>
+  <a class="navbar_item" routerLink="messages" routerLinkActive="navbar_active">
+    <app-messages-icon></app-messages-icon>
+    <span>Messages</span>
+  </a>
+
+  <a class="navbar_item" (click)="setEquipmentSubMenuOpen(true)"
+     [ngClass]="{'submenu_active': isEquipmentSubMenuOpen}">
+    <app-equipment-icon></app-equipment-icon>
+    <span>Equipment</span>
+    <app-right-chevron-icon class="submenu_icon"></app-right-chevron-icon>
+  </a>
+  <div class="navbar_submenu" *ngIf="isEquipmentSubMenuOpen" [ngClass]="{'submenu_active': isEquipmentSubMenuOpen}">
+    <a class="navbar_item" routerLink="equipment/connect">
+      <span>Connect</span>
+    </a>
+    <a class="navbar_item" routerLink="equipment/trucks">
+      <span>Trucks</span>
+    </a>
+    <a class="navbar_item" routerLink="equipment/trailers">
+      <span>Trailers</span>
+    </a>
+  </div>
+
+  <a class="navbar_item" routerLink="drivers" routerLinkActive="navbar_active">
+    <app-drivers-icon></app-drivers-icon>
+    <span>Drivers</span>
+  </a>
+  <a class="navbar_item" routerLink="brokers" routerLinkActive="navbar_active">
+    <app-brokers-icon></app-brokers-icon>
+    <span>Brokers</span>
+  </a>
+  <a class="navbar_item" routerLink="integrations" routerLinkActive="navbar_active">
+    <app-integrations-icon></app-integrations-icon>
+    <span>Integrations</span>
+  </a>
+
+  <div class="navbar_item" (click)="setSettingsSubMenuOpen(true)"
+       [ngClass]="{'submenu_active': isSettingsSubMenuOpen}">
+    <app-settings-icon></app-settings-icon>
+    <span>Settings</span>
+    <app-right-chevron-icon class="submenu_icon"></app-right-chevron-icon>
+  </div>
+  <div class="navbar_submenu" *ngIf="isSettingsSubMenuOpen" [ngClass]="{'submenu_active': isSettingsSubMenuOpen}">
+    <a class="navbar_item" routerLink="settings/users" routerLinkActive="navbar_active">
+      <span>Users</span>
+    </a>
+    <a class="navbar_item" routerLink="settings/company-profile" routerLinkActive="navbar_active">
+      <span>Company info</span>
+    </a>
+  </div>
+</nav>
+<div class="navbar_footer">
+  <div *ngIf="isUserSubMenuOpen" [ngClass]="{'submenu_active': isUserSubMenuOpen}">
+    <a class="navbar_item" routerLink="settings/user-profile" routerLinkActive="navbar_active">
+      <app-user-profile-icon></app-user-profile-icon>
+      <span>Profile</span>
+    </a>
+    <div class="navbar_item" (click)="logout()">
+      <app-logout-icon></app-logout-icon>
+      <span>Logout</span>
+    </div>
+  </div>
+  <div class="user_details_container">
+    <div class="user_details">
+      <span>FirstName LastName</span>
+      <span>User Role</span>
+      <span>Company Name</span>
+    </div>
+    <div class="navbar_item" (click)="setUserSubMenuOpen(true)"
+         [ngClass]="{'submenu_active': isUserSubMenuOpen}">
+      <app-unfold-more-icon></app-unfold-more-icon>
+    </div>
+  </div>
+</div>

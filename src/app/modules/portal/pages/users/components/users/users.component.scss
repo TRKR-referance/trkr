@@ -1,0 +1,25 @@
+:host {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content_container {
+  height: 100%;
+}
+
+.table_container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.details_container {
+  width: 421px;
+}
+
+.table {
+  width: 100%;
+  height: 100%;
+}

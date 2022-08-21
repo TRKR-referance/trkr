@@ -1,0 +1,19 @@
+<app-app-bar title="Users">
+  <button class="secondary" style="width: 180px">
+    <app-person-add></app-person-add>
+    <span>Create User</span>
+  </button>
+</app-app-bar>
+<div class="content_container">
+  <div class="table_container">
+    <input type="text">
+    <ag-grid-angular
+      class="ag-theme-balham table"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs">
+    </ag-grid-angular>
+  </div>
+  <div class="card details_container">
+    user-details
+  </div>
+</div>

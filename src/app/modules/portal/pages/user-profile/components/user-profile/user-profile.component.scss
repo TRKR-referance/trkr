@@ -1,0 +1,22 @@
+:host {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+.row {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.save {
+  width: 180px;
+}

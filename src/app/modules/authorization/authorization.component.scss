@@ -1,0 +1,41 @@
+:host {
+  flex: 1;
+  width: 100%;
+  display: flex;
+}
+
+.background_container {
+  flex: 1;
+  background-image: url("../../../assets/images/sign-in/sign-in-background.png");
+  background-size: cover;
+  background-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.form_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  background-color: #ffffff;
+}
+
+.logo_icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.logo_full {
+  width: 206px;
+  margin-bottom: 38px;
+  margin-left: 100px;
+}
+
+.description {
+  margin-left: 100px;
+  margin-bottom: 100px;
+}
